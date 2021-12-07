@@ -9,24 +9,28 @@
 abbr{
     text-decoration: none;
 }
-
+hr{
+    width: 85%;
+    margin: auto;
+    border: 1px dashed rgb(27, 86, 158);
+}
 body{
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:Murecho;
+    color: rgb(255, 255, 255);
+    background-color: rgb(27, 41, 57);
 }
 
 nav{
-    width: 80%;
+    width: 100%;
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
     justify-content: space-around;
-
+    background-color: #091353;
 }
 
 nav img{
     width: 190px;
-    
 }
 
 /* nav ul{
@@ -35,13 +39,13 @@ nav img{
 
 nav ul li{
     display: inline-block;
-    margin:20px
+    margin:0 20px
 }
 
 nav ul li a{
     text-decoration: none;
     font-weight: bold;
-    color: rgb(184, 0, 0);
+    color: rgb(255, 249, 249);
     position: relative;
     text-shadow: 1PX 1PX rgba(36, 36, 36, 0.178) ;
 }
@@ -63,19 +67,63 @@ nav ul li a:hover::before{
 }
 .fa{
     margin-right: 8px;   
+    color: white;
 }
 
-
-/* ============================================== */
-.category{
-    margin-bottom: 30px;
+nav ul li:hover .fa{
+    color: rgb(184, 0, 0);
 }
-.category h5{
+
+.search-bar{
+    width: 220px;
+    height: 27px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: none;
+}
+.search-bar::placeholder{
+    color: rgb(27, 41, 57);
     font-weight: bold;
-    margin-left: 50px;
+}
+/* ============================================== */
+
+
+.category{
+    padding: 20px 20px;
+    background-color: #17355e;
+}
+.category ul{
+    margin-left: 30px;
+}
+.category ul li{
+    display: inline-block;
+}
+.category ul li span{
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    padding: 0 20px;
+}
+.category ul li h3{
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+.category ul li a{
+    text-decoration: none;
+    color: white;
+}
+.category ul li h3:hover{
+    text-decoration: underline;
 }
 
 /* =============================================== */
+
+main{
+    background-color: rgb(27, 41, 57);
+    padding: 20px 0;
+}
+
 .description{
     margin: 20px 50px;
 }
@@ -85,6 +133,16 @@ nav ul li a:hover::before{
     font-size: 30px;
     color: rgb(184, 0, 0);
     font-family: lobster;
+}
+.fa-gamepad{
+    transform: translateY(-3px);
+}
+
+.description h3:hover .fa-gamepad{
+    transition: all 0.4s ease-out;
+    transform: rotate(-30deg) translateY(-8px);
+    margin: 0;
+
 }
 /* ================================================ */
 /* .shop-container{
@@ -112,20 +170,25 @@ nav ul li a:hover::before{
     /* display: flex;
     justify-content: center; */
     text-align: center;
-    border: 1px solid #000;
     transition: transform 0.5s;
+    border: 1px solid rgb(28, 99, 185);
     max-width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #0C4271;
 }
 .game1:hover{
     transform: scale(102%);
+    box-shadow: 0px 0px 6px rgba(0, 140, 255, 0.562);
 }
 
 .game1 ul{
     line-height: 40px;
     text-align: left;
+
 }
 .game1 ul li:first-child{
-    padding: 8px 0;
+    padding: 10px 0;
     text-align: center;
 }
 .game1 ul li {
@@ -134,9 +197,11 @@ nav ul li a:hover::before{
 }
 
 .game1 img{
-    width: 240px;
-    height: 180px;
-    margin: auto 8px;
+    max-width: 250px;
+    height: 185px;
+    border: 1px solid rgb(27, 86, 158);
+    border-radius: 8px;
+    position: relative;
 }
 
 .game1 ul li p:first-child{
@@ -145,43 +210,64 @@ nav ul li a:hover::before{
 
 .game1 ul li:nth-child(5){
     font-size: 14px;
-    color: rgb(0, 190, 0);
+    color: rgb(255, 0, 0);
+    font-weight: bold;
 }
 
 .game1 ul li h5{
-    color: rgb(99, 99, 99);
+    color: rgb(212, 212, 212);
 }
 
 .game1 ul li:last-child{
-    margin: 20px 5px;
-    transform-origin: center center;
-    -webkit-transform: translateX(calc(50% - 75px));
-        -moz-transform: translateX(calc(50% - 75px));
-            transform: translateX(calc(50% - 75px)); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    
 }
 
 .game1 ul li a:hover:last-child{
-    background-color: rgb(184, 0, 0);
+    background-color: rgb(179, 2, 2);
+    box-shadow: 0px 0px 6px rgba(204, 2, 2, 0.466);
+
 }
 
 .game1 ul li a{ 
-    padding:10px 16px;
+    padding:1px 20px;
     border: none;
-    border-radius:20px;
-    background-color: rgb(106, 144, 250);
+    border-radius:15px;
+    background-color: rgb(51, 86, 182);
     color:rgb(255, 255, 255);
     text-decoration: none;
+    font-size: 14px;
 }
 
-@media (max-width : 575px) {
+@media (max-width : 600px) {
     .shop-container{
-    grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
     }
     .game1{
-        width: 260px;
+        min-width: 260px;
         margin: 0 auto;
     }
+    nav{
+        width: 100%;
+        padding:20px 0;
+    }
+
     nav ul {
-        display:none;
+        flex-direction: row;
+        text-align: center;
+    }
+    nav ul li{
+        width: 100%;
+        margin: 25px auto;
+    }
+
+    nav{
+        flex-wrap: wrap;
+        flex-direction: row;
+
     }
 }
