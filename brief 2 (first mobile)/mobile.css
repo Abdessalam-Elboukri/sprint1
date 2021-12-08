@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Murecho&display=swap');
 
-:root{
-   headecolor:--rgb(0, 57, 126) ;
-}
+
 *{
     margin: 0;
     padding: 0;
@@ -49,7 +47,7 @@ nav ul li a::before{
     content: '';
     width: 0%;
     height: 2px;
-    background-color: rgb(184, 0, 0);
+    background-color: rgb(255, 255, 255);
     border-radius: 25px;
     bottom: -5px;
     left: 0;
@@ -106,7 +104,7 @@ nav ul li:hover .fa{
 .description h3{
     padding-bottom: 15px;
     font-size: 30px;
-    color: rgb(184, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: lobster;
 }
 
@@ -135,6 +133,7 @@ main{
     text-align: center;
     transition: transform 0.5s;
     border: 1px solid rgb(28, 99, 185);
+    padding: 0 6px;
     max-width: 300px;
     border-radius: 15px;
     overflow: hidden;
@@ -162,7 +161,7 @@ main{
 }
 
 .game1 img{
-    max-width: 255px;
+    max-width: 280px;
     height: 185px;
     border: 1px solid rgb(27, 86, 158);
     border-radius: 8px;
@@ -179,7 +178,7 @@ main{
     font-weight: bold;
 }
 
-.game1 ul li h5{
+.game1 ul li .price{
     color: rgb(212, 212, 212);
 }
 
@@ -207,21 +206,43 @@ main{
     font-size: 14px;
 }
 
-.register{
+footer{
     text-align: center;
-    line-height: 45px;
     background-color: rgb(34, 33, 33);
-    padding: 20px 0;
+    padding: 20px;
+    box-shadow: 0px 5px 6px rgb(78, 78, 78) inset;
 }
-.register h2{
-    
+footer button{
+    padding: 12px 19px;
+    border: 1px solid rgb(53, 53, 53);
+    background-color: rgb(27, 86, 158);
+    border-radius: 10px;
+    margin: 18px;
+    cursor: pointer;
+}
+footer button:hover{
+    transition: all 0.4s;
+    background-color: rgba(226, 4, 4, 0.678);
+    color: white;
 }
 
+footer p{
+    padding-top: 15px;
+    font-size: large;
+}
+footer span{
+    padding: 0 10px;
+}
+footer a{
+    text-decoration: none;
+    color: rgb(0, 165, 0);
+}
 @media (min-width :700px){
     .shop-container{
         width: 93%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
         grid-template-rows: auto;
         margin: 20px auto;
         gap: 15px;
@@ -239,6 +260,10 @@ main{
     }
     .game1{
         padding: 0 8px;
+        max-width: 300px;
+    }
+    .game1 ul li img{
+        max-width: 250px;
     }
     .description{
         text-align: left;

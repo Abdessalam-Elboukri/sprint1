@@ -245,16 +245,6 @@ main{
     font-size: 14px;
 }
 
-
-.register{
-    text-align: center;
-    line-height: 36px;
-    background-color: rgb(19, 19, 19);
-}
-.register h2{
-    
-}
-
 @media (max-width : 600px) {
     .shop-container{
         grid-template-columns: repeat(1, 1fr);
